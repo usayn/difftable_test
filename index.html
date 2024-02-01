@@ -2,16 +2,17 @@
 <html lang="ja">
 
 <head>
-	<title>おなまえ難易度</title>
+	<title>おなまえ難易度表</title>
 	<meta charset="UTF-8">
 	<meta name="bmstable" content="header.json" /> <!--　読み込む難易度表のヘッダファイルをここに指定　-->
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<link href="style/style.css" rel="stylesheet" type="text/css" media="screen,print" />
 </head>
 
 <body>
 
 <center>
-<strong><span style="font-size: 24pt;">おなまえ難易度</span></strong><br>
+<strong><span style="font-size: 24pt;">おなまえ難易度表</span></strong><br>
 </center>
 
 <!--　　　　　ここから難易度表本体　　　　　-->
@@ -114,7 +115,7 @@ function makeBMSTable(info, mark, order) {
 	
     // 表のクリア
     obj.html("");
-    $("<tr height='20' style='color:white;background-color:#666666'><td align='center'>LV</td><td colspan='2' align='center'>beatoraja IR</td><td align='center'>タイトル</td><td align='center'>本体</td><td align='center'>差分</td><td align='center'>コメント</td></tr>").appendTo(obj);
+    $("<tr height='20' style='color:white;background-color:#666666'><td align='center'>LV</td><td align='center'>動画</td><td align='center'>譜面</td><td colspan='2' align='center'>beatoraja IR</td><td align='center'>タイトル</td><td align='center'>本体</td><td align='center'>差分</td><td align='center'>コメント</td></tr>").appendTo(obj);
     var obj_sep = null;
     for (var i = 0; i < info.length; i++) {
         // 難度ごとの区切り
@@ -153,9 +154,11 @@ function makeBMSTable(info, mark, order) {
 
         // レベル表記
         $("<td width='6%'>" + mark + x + "</td>").appendTo(str);
-        // 動画
 　　　　// Mocha Repository
 　　　　$("<td width='1%' align='center'><a href='https://mocha-repository.info/song.php?sha256=" + info[i].sha256 + "' target='_blank'><img src='/style/mochair_logo.gif' border='0' alt='Mocha Repository' /></a></td>").appendTo(str);
+
+　　　　// MinIR
+　　　　$("<td width='1%' align='center'><a href='https://www.gaftalk.com/minir/#/viewer/song/" + info[i].sha256 + "/0' target='_blank'><img src='/style/minir_logo.gif' border='0' alt='MinIR' /></a></td>").appendTo(str); <!-- /0 を /1 /2 に変更すると CN,HCN のIRページにリンクされます -->
 
         // タイトル
         $("<td width='20%'>" + "<a href='http://www.dream-pro.info/~lavalse/LR2IR/search.cgi?mode=ranking&bmsmd5=" + info[i].md5 + "' target='_blank'>" + info[i].title + "</a></td>").appendTo(str);
