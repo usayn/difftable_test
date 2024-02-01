@@ -1,5 +1,6 @@
 {
-	name : "おなまえ難易度",
-	symbol : "の",
-	data_url : "table.json"
+	"name" : "おなまえ難易度",
+	"symbol" : "の",
+	"data_url" : "https://script.google.com/macros/s/AKfycbxkO-cMFZutu5DmHmXqEAxbWJ_BMBbKM3msRv8HEyB6nbQtk3yCO-dC7lD5eR6lQZ0cBw/exec"
+	"level_order" : ["1","2","3","4","5","6","7","8","9","10","11","12"]
 }
