@@ -1,5 +1,5 @@
 {
 	name : "おなまえ難易度",
 	symbol : "の",
-	data_url : "https://script.google.com/macros/s/AKfycbxkO-cMFZutu5DmHmXqEAxbWJ_BMBbKM3msRv8HEyB6nbQtk3yCO-dC7lD5eR6lQZ0cBw/exec"
+	data_url : "table.json"
 }
